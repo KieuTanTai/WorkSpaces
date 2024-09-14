@@ -1,0 +1,5 @@
+Đoạn mã này trích xuất các phần tử bên trên và bên dưới đường chéo chính
+của ma trận vào hai mảng riêng biệt và so sánh chúng. 
+Nếu tất cả các phần tử tương ứng bằng nhau, ma trận được coi là đối xứng qua đường chéo chính. 
+Phương pháp này là một cách khác để kiểm tra tính đối xứng của 
+ma trận ngoài phương pháp so sánh trực tiếp các phần tử của ma trận.

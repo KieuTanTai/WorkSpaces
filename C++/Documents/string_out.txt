@@ -1,0 +1,6 @@
+chính
+chúng.
+chính.
+của
+trận.
+Nếu tất cả các phần tử tương ứng bằng nhau, ma trận được coi là đối xứng qua đường chéo chính. 

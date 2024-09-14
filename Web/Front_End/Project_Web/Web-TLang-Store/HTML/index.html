@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <title> TLang Shop</title>
+          <meta charset="UTF-8"/>
+          <meta name="viewport" content="width=device-width, initial-scale= 1.0"/>
+          <script src="https://kit.fontawesome.com/397988630e.js" crossorigin="anonymous"></script>
+          <link rel="icon" type="ico" href="../../Assets_Local/Images/Icons/favicon.ico"/>
+          <link rel="stylesheet" href="../Assets/CSS/Style.css"/>
+          <!-- <link href="/My_Web/Assets/CSS/output.css" rel="stylesheet"> -->
+     </head>
+     <body class="dark_theme||light_theme">
+          <script src="../JavaScript/Demo.js"></script>
+          <header class="header_content">
+               <div class="container">
+                    <div class="content_inside">
+                         <!-- Header Bar of this web -->
+                         <section class="logo_web">
+                              <a href="http://127.0.0.1:5500/My_Web/HTML/Learn_html_CSS.html" title="TLang Store" style="text-decoration: none; color:rgb(30, 30, 252)"> 
+                                   <img src="../../Assets_Local/Images/Icons/Screenshot 2024-04-22 134213.png"/>
+                              </a>
+                         </section>
+                         <!-- Just Show Navbar when Hover Navbar icons-->
+                         <section  id="first_div" class="Pointer_Right Mouse_Point dropdown_hover dropdown_click">
+                              <span class="awesome_icons">
+                                   <i class="fa-solid fa-arrow-down fa-gl"></i>
+                              </span>
+                              <span class="awesome_icons">
+                                   <i class="fa-solid fa-bars fa-xl"></i>
+                              </span>
+                         </section>
+                         <!-- Search bar -->
+                         <section class="form_search"> 
+                              <form action="https://www.fahasa.com/catalogsearch/result/">
+                                   <input id="search_bar" name="search bar" type="text" placeholder="Tìm Light Novel"/>
+                              </form>
+                              <span class="icon_inside">
+                                   <span class="awesome_icons">
+                                        <i class="fa-solid fa-magnifying-glass fa-lg" style="color: white;"></i>
+                                   </span>
+                              </span>
+                         </section>
+                         <!-- A flex box contain Notifications + Bags + Account function + switch Dark/Light theme -->
+                         <section class="function">
+                              <div class="func_button">
+                                   <a href="https://www.fahasa.com/customer/notification" title="Thông Báo">
+                                        <span class="awesome_icons">
+                                             <i class="fa-regular fa-bell fa-flip-horizontal fa-xl" style="color: #66bdff; "></i>
+                                        </span>
+                                        <p>Thông Báo</p>
+                                   </a>
+                              </div>
+                              <div class="func_button">
+                                   <a href="https://www.fahasa.com/checkout/cart/" title="Giỏ Hàng">
+                                        <span class="awesome_icons">
+                                             <i class="fa-solid fa-bag-shopping fa-xl" style="color: #66bdff;"></i>
+                                        </span>
+                                        <p>Giỏ Hàng</p>
+                                   </a>
+                              </div>
+                              <div class="func_button">
+                                   <a href="https://www.fahasa.com/customer/account/login/referer/aHR0cHM6Ly93d3cuZmFoYXNhLmNvbS9jdXN0b21lci9hY2NvdW50L2luZGV4Lw,,/" title="Tài Khoản">
+                                        <span class="awesome_icons">
+                                             <i class="far fa-user-circle fa-xl" style="color: #66bdff;"></i>
+                                        </span>
+                                        <p>Tài Khoản</p>
+                                   </a>
+                              </div>
+                              <div class="func_button">
+                                   <!-- Switch Dark/Light theme with JS -->
+                                   <span class="awesome_icons night_mode_button">
+                                        <span class="button"></span>
+                                   </span>
+                                   <script src="../JavaScript/For_Web.js"></script>
+                              </div>
+                         </section>
+                    </div>
+               </div>
+          </header>
+          <main class="main_content">
+               <div class="container">
+                    <!-- Main banner largest in this web and a lot of banner QC source: Fahasa.com and ThaiHa Store -->
+                    <section class="homepage_banner">
+                         <a class="banners" href="https://thaihabooks.com/chao-mung-thang-4-thang-doc-sach/" title="Mừng tháng 4 tháng đọc sách">
+                              <img src="../../Assets_Local/Images/BackGrounds/siteheader_weakestTamerLN_864x300.jpg" alt="Hội Sách"/>
+                         </a>
+                         <!-- A lot of banner QC source: Fahasa.com -->
+                         <div class="banner_image_block">
+                              <div class="banner_image_inner">
+                                   <a href="https://www.fahasa.com/he-den-roi-ta-doc-sach-thoi?fhs_campaign=homepage_smallbanner_1"">
+                                        <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-04-2024/Week2_T424_Banner_SmallBanner_310x210_1.jpg" alt=" Discount tháng 04/2024"/>
+                                   </a>
+                              </div>
+                              <div class="banner_image_inner">
+                                   <a href="https://www.fahasa.com/multilingual-bookshelf?fhs_campaign=homepage_smallbanner_2">
+                                        <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-04-2024/BannerNgoaiVanT0424_Smallbanner_310x210.jpg" alt="Shocking Discount"/>
+                                   </a>
+                              </div>
+                              <div class="banner_image_inner">
+                                   <a href="https://www.fahasa.com/tiger-family?fhs_campaign=homepage_smallbanner_3">
+                                        <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-04-2024/Balo_TigerFamily_SmallBanner_T4_310x210.png" alt="Cặp chuẩn công thái học"/>
+                                   </a>
+                              </div>
+                              <div class="banner_image_inner"> 
+                                   <a href="https://www.fahasa.com/tan-viet?fhs_campaign=homepage_smallbanner_4">
+                                        <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-04-2024/TanViet_Silver_0424_Ver1_SmallBanner_310x210_1.png" alt="Chào hè rực rỡ"/>
+                                   </a>
+                              </div>
+                         </div>
+                    </section>
+                    <!-- category site with a lot of function  source: Fahasa.com -->
+                    <section id="site-category">
+                         <h2 class="header_font container">
+                              <span>Nổi Bật</span>
+                         </h2>
+                         <div class="category_icons">
+                              <div class="Icons_inner"> 
+                                   <a href="https://www.fahasa.com/flashsale?fhs_campaign=homepageicon" title="Flash Sales">
+                                        <span>
+                                             <img src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Icon_FlashSale_Thuong_120x120.png"/>
+                                        </span>
+                                        Flash Sales
+                                   </a>
+                              </div>
+                              <div class="Icons_inner">
+                                   <a href="" title="Kinh Tế">
+                                   <span>
+                                        <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-04-2024/Icon_KinhTe_Thuong.png"/>
+                                   </span>
+                                   Kinh Tế
+                                   </a>
+                              </div>
+                              <div class="Icons_inner">
+                                   <a href="" title="Light Novel">
+                                        <span>
+                                             <img src="../../Assets_Local/Images/Icons/FoxLN.png"/>
+                                        </span>
+                                        Light Novel
+                                   </a>
+                              </div>
+                              <div class="Icons_inner">
+                                   <a href="https://www.fahasa.com/nhap-hoi-manga-comic?fhs_campaign=homepageicon" title="Manga">
+                                        <span>
+                                             <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-03-2024/HSO_MangaT324_Icon.png"/>
+                                        </span>
+                                        Manga
+                                   </a>
+                              </div>
+                              <div class="Icons_inner">
+                                   <a href="https://www.fahasa.com/phien-cho-do-cu?fhs_campaign=homepageicon" title="Phiên Chợ Sách Cũ">
+                                        <span>
+                                             <img src="https://cdn0.fahasa.com/media/wysiwyg/Thang-01-2024/ChoDoCu.png"/>
+                                        </span>
+                                        Phiên chợ Sách Cũ
+                                   </a>
+                              </div>
+                              <div class="Icons_inner">
+                                   <a href="https://www.fahasa.com/new-product?category=all&sort=created_at&fhs_campaign=homepageicon" title="Sản Phẩm Mới">
+                                        <span>
+                                             <img src="https://cdn0.fahasa.com/media/wysiwyg/icon-menu/Icon_SanPhamMoi_8px_1.png"/>
+                                        </span>
+                                        Sản Phẩm Mới
+                                   </a>
+                              </div>
+                         </div>
+                    </section>
+                    <!-- Show books in store and some blogs -->
+                    <section class="content_product">
+                         <!-- coupon items  -->
+                         <div class="coupon_list">
+                              <div class="coupon_items">
+
+                              </div>
+                         </div>
+                         <!-- category bar with new books + popular books + best selling books tabs -->
+                         <ul class="category_top">
+                              <li class="nav_items" >
+                                   <a class="nav_link active show" data-toggle="tab" href="#tab0">Sách Mới</a>
+                              </li>
+                              <li class="nav_items" >
+                                   <a class="nav_link" data-toggle="tab" href="#tab1">Phổ Biến</a>
+                              </li>
+                              <li class="nav_items" >
+                                   <a class="nav_link" data-toggle="tab" href="#tab2">Bán Chạy</a>
+                              </li>
+                         </ul>
+                         <!-- Show all books on tab id that have a class active and show-->
+                         <div class="tab_content">
+                              <div class="list_items fade active show" id="tab0"> <!-- show books in the tab have class active and show-->
+                                   <div class="row">
+                                        <!-- a flex box with direction column to show images of this book, name, price, sales and quick function -->
+                                        <div class="column_custom">
+                                             <div class="item_products"> 
+                                                  <a class="images" href="https://ipm.vn/products/ba-ngay-hanh-phuc" title="Ba Ngày Hạnh Phúc">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/3_ngay_hanh_phuc.jpg" alt="Ba Ngày Hạnh Phúc"/>
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://ipm.vn/products/ba-ngay-hanh-phuc" title="Ba Ngày Hạnh Phúc">Ba Ngày Hạnh Phúc</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      85.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 31%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 54.000
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://ipm.vn/products/dau-oi-bay-di" title="Đau Ơi Bay Đi">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/dau_oi_bay_di.jpg" alt="Đau Ơi Bay Đi" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://ipm.vn/products/dau-oi-bay-di" title="Đau Ơi Bay Đi">Đau Ơi Bay Đi</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      120.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 59%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 49.000
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/khi-ay-la-mot-dem-day-sao-ban-dac-biet-tang-kem-bookmark-poster.html" title="Khi Ấy Là Một Đêm Đầy Sao">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/dem_day_sao.jpg" alt="Khi Ấy Là Một Đêm Đầy Sao" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/khi-ay-la-mot-dem-day-sao-ban-dac-biet-tang-kem-bookmark-poster.html" title="Khi Ấy Là Một Đêm Đầy Sao">Khi Ấy Là Một Đêm Đầy Sao</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      139.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 10%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 125.100
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href=" " title="Đêm Nay Dẫu Tình Yêu Biến Mất Khỏi Thế Gian">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/dem_nay_dau_tinh_yeu_bien_mat.jpg" alt="Đêm Nay Dẫu Tình Yêu Biến Mất Khỏi Thế Gian"/>
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/dem-nay-dau-tinh-yeu-nay-bien-mat-khoi-the-gian.html" title="Đêm Nay Dẫu Tình Yêu Biến Mất Khỏi Thế Gian">Đêm Nay Dẫu Tình Yêu Biến Mất Khỏi Thế Gian</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      129.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 22%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 100.620
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://ipm.vn/products/em-la-anh-sang-giua-dem-trang" title="Em Là Ánh Sáng Giữa Đêm Trăng">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/em_la_anh_sang_giua_dem_trang.jpg" alt="Em Là Ánh Sáng Giữa Đêm Trăng" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://ipm.vn/products/em-la-anh-sang-giua-dem-trang" title="Em Là Ánh Sáng Giữa Đêm Trăng">Em Là Ánh Sáng Giữa Đêm Trăng</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      80.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 26%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 59.000
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>         
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/em-la-nguoi-song-toi-la-nguoi-chet-the-gioi-doi-luc-lai-dao-nguoc-tang-kem-bookmark-2-postcard.html" title="Em Là Người Sống, Tôi Là Người Chết, Thế Giới Đôi Lúc Lại Đảo Ngược">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/Em_la_nhan_loai.jpg" alt="Em Là Người Sống, Tôi Là Người Chết, Thế Giới Đôi Lúc Lại Đảo Ngược" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/em-la-nguoi-song-toi-la-nguoi-chet-the-gioi-doi-luc-lai-dao-nguoc-tang-kem-bookmark-2-postcard.html" title="Em Là Người Sống, Tôi Là Người Chết, Thế Giới Đôi Lúc Lại Đảo Ngược">Em Là Người Sống, Tôi Là Người Chết, Thế Giới Đôi Lúc Lại Đảo Ngược</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      139.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 10%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 125.100
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/gui-em-cua-muoi-nam-sau.html" title="Gửi Em Của Mười Năm Sau">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/gui_em_cua_10_nam_sau.jpg" alt="Gửi Em Của Mười Năm Sau" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/gui-em-cua-muoi-nam-sau.html" title="Gửi Em Của Mười Năm Sau">Gửi Em Của Mười Năm Sau</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      129.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 13%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 112.230
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/ky-sinh-trung-biet-yeu-light-novel-tang-kem-bookmark-hinh-nhan-vat.html" title="Ký Sinh Trùng Biết Yêu">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/Ky_sinh_trung_biet_yeu.jpg" alt="Ký Sinh Trùng Biết Yêu" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/ky-sinh-trung-biet-yeu-light-novel-tang-kem-bookmark-hinh-nhan-vat.html" title="Ký Sinh Trùng Biết Yêu">Ký Sinh Trùng Biết Yêu</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      120.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 10%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 108.000
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/nang-tho-may-tinh-linh.html" title="Nàng Thợ May Tinh Linh">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/nang_tho_may_tinh_linh.jpg" alt="Nàng Thợ May Tinh Linh" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/nang-tho-may-tinh-linh.html" title="Nàng Thợ May Tinh Linh">Nàng Thợ May Tinh Linh</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      138.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 22%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 107.680
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/nha-tro-chim-hoang-yen-tap-1-bay-chim-noi-khu-vuon-hoang-phe.html" title="Nhà Trọ Chim Hoàng Yến tập 1: Bầy Chim Nơi Khu Rừng Hoang Phế">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/nha_tro_chim_hoang_yen_1.jpg" alt="Nhà Trọ Chim Hoàng Yến tập 1: Bầy Chim Nơi Khu Rừng Hoang Phế" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/nha-tro-chim-hoang-yen-tap-1-bay-chim-noi-khu-vuon-hoang-phe.html" title="Nhà Trọ Chim Hoàng Yến tập 1: Bầy Chim Nơi Khu Rừng Hoang Phế">Nhà Trọ Chim Hoàng Yến tập 1: Bầy Chim Nơi Khu Rừng Hoang Phế</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      109.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 27%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 79.570
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/nha-tro-chim-hoang-yen-tap-2-doi-canh-huong-toi-nhung-vi-sao-tang-kem-bookmark-postcard.html" title="Nhà Trọ Chim Hoàng Yến tập 2: Đôi Cánh Hướng Tới Những Vì Sao">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/nha_tro_chim_hoang_yen_2.jpg" alt="Nhà Trọ Chim Hoàng Yến tập 2: Đôi Cánh Hướng Tới Những Vì Sao" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/nha-tro-chim-hoang-yen-tap-2-doi-canh-huong-toi-nhung-vi-sao-tang-kem-bookmark-postcard.html" title="Nhà Trọ Chim Hoàng Yến tập 2: Đôi Cánh Hướng Tới Những Vì Sao">Nhà Trọ Chim Hoàng Yến tập 2: Đôi Cánh Hướng Tới Những Vì Sao</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      109.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 27%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 79.570
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/okitegami-kyoko-i-so-ghi-chep-tang-kem-postcard-nhua-hinh-nhan-vat.html" title="Okitegami Kyoko I: Sổ Ghi Chép">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/okitegamikyoko_1.jpg" alt="Okitegami Kyoko I: Sổ Ghi Chép" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/okitegami-kyoko-i-so-ghi-chep-tang-kem-postcard-nhua-hinh-nhan-vat.html" title="Okitegami Kyoko I: Sổ Ghi Chép">Okitegami Kyoko I: Sổ Ghi Chép</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      145.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 10%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 130.500
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/okitegami-kyoko-ii-thu-tien-cu-tang-kem-postcard-nhua-hinh-nhan-vat.html" title="Okitegami Kyoko II: Thư Tiến Cử">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/okitegamikyoko_2.jpg" alt="Okitegami Kyoko II: Thư Tiến Cử" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/okitegami-kyoko-ii-thu-tien-cu-tang-kem-postcard-nhua-hinh-nhan-vat.html" title="Okitegami Kyoko II: Thư Tiến Cử">Okitegami Kyoko II: Thư Tiến Cử</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      175.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 10%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 157.500
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/gui-toi-nguoi-mua-dong-nay-se-khong-con-nua.html" title="Gửi Tới Người Mùa Đông Này Sẽ Không Còn Nữa">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/gui-toi-nguoi-mua-dong-nay-se-khong-con-nua.jpg" alt="Gửi Tới Người Mùa Đông Này Sẽ Không Còn Nữa" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/gui-toi-nguoi-mua-dong-nay-se-khong-con-nua.html" title="Gửi Tới Người Mùa Đông Này Sẽ Không Còn Nữa">Gửi Tới Người Mùa Đông Này Sẽ Không Còn Nữa</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      123.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 22%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 95.940
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                        <div class="column_custom">
+                                             <div class="item_products">
+                                                  <a class="images" href="https://www.fahasa.com/mua-he-thu-hai-mat-em-mai-mai.html" title="Mùa Hè Thứ Hai, Mất Em Mãi Mãi">
+                                                       <img src="../../Assets_Local/Images/Light_Novel/mua-he-thu-2.jpg" alt="Mùa Hè Thứ Hai, Mất Em Mãi Mãi" />
+                                                  </a>
+                                                  <h3>
+                                                       <a href="https://www.fahasa.com/mua-he-thu-hai-mat-em-mai-mai.html" title="Mùa Hè Thứ Hai, Mất Em Mãi Mãi">Mùa Hè Thứ Hai, Mất Em Mãi Mãi</a>
+                                                  </h3>
+                                                  <p class="price_label">
+                                                       <span class="special_price">
+                                                            <span class="old-price">
+                                                                 <bdi class="price">
+                                                                      99.000
+                                                                      <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                                 </bdi>
+                                                            </span>
+                                                            <span class="discount_percent"> 15%</span>
+                                                       </span>
+                                                       <span class="after_discount">
+                                                            <bdi class="price"> 
+                                                                 84.150
+                                                                 <span class="awesome_icons"><i class="fa-solid fa-dong-sign"></i></span>
+                                                            </bdi>
+                                                       </span>
+                                                       <div class="cart">
+                                                            <span class="add_to_cart">Thêm vào giỏ hàng</span>
+                                                            <span class="buy_now"> Mua ngay</span>
+                                                       </div>
+                                                  </p>
+                                             </div>    
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- Some blogs below  source: IPM Store -->
+                         <div class="blogs container">
+                              <h2><span>Bài Viết Mới</span></h2>
+                              <!-- blog items -->
+                              <div class="list_blogs">
+                                   <div class="blogs_items">
+                                        <div class="blog_reviews">
+                                             <a class="blog_images" href="https://ipm.vn/blogs/tintuc/on-lai-ki-niem-tuoi-tho-voi-bo-manga-vui-nhon-yotsuba" title="Ôn Lại Kỉ Niệm">
+                                                  <img src="../../Assets_Local/Images/Banners/Yotsuba.jpg" alt="Yotsuba"/>
+                                             </a>
+                                             <div class="blog_details">
+                                                  <a id="blog_name" href="https://ipm.vn/blogs/tintuc/on-lai-ki-niem-tuoi-tho-voi-bo-manga-vui-nhon-yotsuba" title="Ôn Lại Kỉ Niệm">
+                                                       <h3>Ôn Lại Kỉ Niệm Tuổi Thơ Với Bộ Manga Vui Nhộn Yotsuba!</h3>
+                                                  </a>
+                                                  <p id="Date">25/04/2024</p>
+                                                  <p id="details">
+                                                       Tháng 4 này, IPM ra mắt bạn đọc bộ truyện từng là một phần tuổi thơ của nhiều độc giả - Yotsuba&!
+                                                       Yotsuba&! nghĩa là gì?
+                                                       Thoạt nhìn, có thể bạn sẽ thấy tên truyện sao mà... phức tạp, mà nhiều dấu thế. Nhưng ý nghĩa của cái tên này thật ra lại rất đơn giản và gắn liền với nội dung truyện: Xoay quanh hành trình khám phá thế giới của cô bé năm tuổi Yotsuba hồn nhiên, năng động đến tăng động. Tác giả đặt tên các chương theo cấu trúc Yotsuba& (như Yotsuba& Chuyển Nhà, Yotsuba& TV, Yotsuba& Nóng Lên Toàn Cầu…) vừa đơn giản dễ nhớ, vừa nhằm mô tả các trải nghiệm mới mẻ và vui vẻ, đôi khi dở khóc dở cười của cô bé Yotsuba.
+                                                  </p>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="blogs_items">
+                                        <div class="blog_reviews">
+                                             <a class="blog_images" href="https://ipm.vn/blogs/tintuc/review-mua-ha-em-va-toi" title="Mùa Hạ, Em Và Tôi">
+                                                  <img src="../../Assets_Local/Images/Banners/mua-ha-em-va-toi.jpg" alt="Mùa Hạ, Em Và Tôi"/>
+                                             </a>
+                                             <div class="blog_details">
+                                                  <a id="blog_name" href="https://ipm.vn/blogs/tintuc/review-mua-ha-em-va-toi" title="Mùa Hạ, Em Và Tôi">
+                                                       <h3>Mùa Hạ, Em Và Tôi - Chuyện Tình Trong Veo Tuổi Đôi Mươi</h3>
+                                                  </a>
+                                                  <p id="Date">5/04/2024</p>
+                                                  <p id="details">
+                                                       “Tại sao tớ lại yêu cậu và mùa hè bên cậu tới nhường này…”
+                                                       Mùa Hạ, Em Và Tôi bắt đầu bằng màn tỏ tình chóng vánh giữa hai chàng trai. Một đêm trăng thanh gió mát, Toda tò mò hỏi Saeki rằng cậu đã có người trong lòng rồi à? Saeki bèn đáp, người trong lòng đang ở ngay trước mặt tớ đây.
+                                                       Đột ngột, giống cách những cơn mưa rào đầu tiên của mùa hạ trút xuống, Saeki đã thổ lộ với bạn thân của mình như thế. Tiếp theo, Saeki bảo Toda rằng cậu rất muốn cùng cậu ấy tới những địa điểm quay phim nổi tiếng. Sẵn niềm đam mê với điện ảnh, cả hai đã có những chuyến đi đáng nhớ.
+                                                  </p>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="blogs_items">
+                                        <div class="blog_reviews">
+                                             <a class="blog_images" href="" title="Biến Tấu Diogenes">
+                                                  <img src="../../Assets_Local/Images/Banners/Bien-tau-diogenes.jpg" alt="Biến Tấu Diogenes"/>
+                                             </a>
+                                             <div class="blog_details">
+                                                  <a id="blog_name" href="https://ipm.vn/blogs/tintuc/4-oneshot-novel-co-yeu-to-ky-ao-voi-thong-diep-thuc-te" title="Biến Tấu Diogenes">
+                                                       <h3>Biến Tấu Diogenes: Tổ Khúc Đặc Sắc Đánh Dấu 10 Năm Sáng Tác Của Nhà Văn Trinh Thám Ăn Khách CHAN HO KEI</h3>
+                                                  </a>
+                                                  <p id="Date">02/04/2024</p>
+                                                  <p id="details">
+                                                       Đánh dấu 10 năm sáng tác bền bỉ, Chan Ho Kei ra mắt tập truyện ngắn Biến Tấu Diogenes gồm 17 tác phẩm đủ các thể
+                                                       loại trinh thám, kinh dị, kỳ bí, giả tưởng,… Nay đã được IPM ra mắt bạn đọc phiên bản tiếng Việt.
+                                                       Một Chan Ho Kei vừa lạ vừa quen
+                                                       Nếu đã “làm quen” Chan Ho Kei qua 13.67 với những pha phá án khiến người đọc ngơ ngác nghẹt thở, hoặc Người
+                                                       Trong Lưới với những tình tiết tinh vi trên không gian mạng, hay Hình Cảnh Mất Trí rất… “mất trí”, thì tới Biến Tấu 
+                                                       Diogenes, bạn đọc sẽ gặp lại những khúc cua đậm chất Chan Ho Kei.
+                                                  </p>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="blogs_items">
+                                        <div class="blog_reviews">
+                                             <a class="blog_images" href="https://ipm.vn/blogs/tintuc/4-oneshot-novel-co-yeu-to-ky-ao-voi-thong-diep-thuc-te" title="OneShot Novel">
+                                                  <img src="../../Assets_Local/Images/Banners/OneShot_Novels.jpg" alt="OneShot Novel"/>
+                                             </a>
+                                             <div class="blog_details">
+                                                  <a id="blog_name" href="https://ipm.vn/blogs/tintuc/4-oneshot-novel-co-yeu-to-ky-ao-voi-thong-diep-thuc-te" title="OneShot Novel">
+                                                       <h3>4 Bộ Oneshot Novel Có Yếu Tố Kỳ Ảo Với Thông Điệp Thực Tế</h3>
+                                                  </a>
+                                                  <p id="Date">11/03/2024</p>
+                                                  <p id="details">
+                                                       Đôi khi, thế giới trong sách vở không phải nơi nào đó xa xôi, xa cách hoàn toàn với thế giới thực...
+                                                       Dù có phép thuật, có những tồn tại vượt quá sức tưởng tượng, có những yêu quái khác xa người thường, thì những tình huống 
+                                                       và bài học mà nhân vật phải đối mặt cũng không khác gì cuộc sống ngoài kia. Nếu bạn đang muốn tìm một câu 
+                                                       chuyện mượn yếu tố kì ảo để gửi gắm thông điệp nhân văn, vậy IPM gợi ý bạn 4 oneshot novel hay ho sau.
+                                                  </p>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <div class="blogs_items">
+                                        <div class="blog_reviews">
+                                             <a class="blog_images" href="https://ipm.vn/blogs/tintuc/co-mot-anh-quoc-huyen-bi-nhu-the-trong-hac-quan-gia" title="Hắc Quản Gia">
+                                                  <img src="../../Assets_Local/Images/Banners/hac_quan_gia.jpg" alt="Hắc Quản Gia"/>
+                                             </a>
+                                             <div class="blog_details">
+                                                  <a id="blog_name" href="https://ipm.vn/blogs/tintuc/co-mot-anh-quoc-huyen-bi-nhu-the-trong-hac-quan-gia" title="Hắc Quản Gia">
+                                                       <h3>[REVIEW Độc Giả] Có Một Anh Quốc Huyền Bí Như Thế Trong Hắc Quản Gia</h3>
+                                                  </a>
+                                                  <p id="Date">19/01/2024</p>
+                                                  <p id="details">
+                                                       "Đây là câu chuyện huyền ảo diễn ra tại Anh quốc mù sương, nơi quý tộc và ác quỷ bắt tay nhau, tử
+                                                       thần cải trang trà trộn vào xã hội loài người, là câu chuyện của những sự kiện kì thú và lạ lùng bậc 
+                                                       nhất, cùng những âm mưu và tội ác khiến người đọc phải rùng mình."
+                                                  </p>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <div class="show_more">
+                                   <a class="show_button" href=" "> Xem Thêm</a>
+                              </div>
+                         </div>
+                    </section>
+               </div>
+          </main>
+          <footer class="footer_content">
+               <section class="social_marketing">
+                    <div class="container">
+                         <div class="content_inside">
+                              <section class="social_links">
+                                   <span class="social_icons">
+                                        <a href="https://twitter.com/thien8224" title="Twitter/X">
+                                             <img src="../../Assets_Local/Images/Icons/icons8-twitterx.svg" alt="Twitter/X"/>
+                                        </a>
+                                   </span>
+                                   <span class="social_icons">
+                                        <a href="https://www.facebook.com/profile.php?id=100079218978533" title="Facebook">
+                                             <img src="../../Assets_Local/Images/Icons/facebook.svg" alt="Facebook"/>
+                                        </a>
+                                   </span>
+                                   <span class="social_icons">
+                                        <a href="https://zalo.me/0843280321" title="Zalo">
+                                             <img src="../../Assets_Local/Images/Icons/icons8-zalo.svg" alt="Zalo"/>
+                                        </a>
+                                   </span>
+                                   <span class="social_icons">
+                                        <a href="https://www.youtube.com/channel/UC6D7p755luht3SKJKaqOgRg" title="Youtube">
+                                             <img src="../../Assets_Local/Images/Icons/icons8-youtube.svg" alt="Youtube"/>
+                                        </a>
+                                   </span>
+                                   <span class="social_icons">
+                                        <a href="https://www.tiktok.com/@thienlangvotri" title="Tiktok">
+                                             <img src="../../Assets_Local/Images/Icons/icons8-tiktok.svg" alt="Tiktok"/>
+                                        </a>
+                                   </span>
+                              </section>
+                              <section class="signup_newsletter">
+                                   <form action="https://www.fahasa.com/newsletter/subscriber/new/" method="get">
+                                        <label for="signup_gmail">NHẬP EMAIL NHẬN THÔNG TIN KHUYẾN MÃI</label>
+                                        <input id="signup_gmail" name="gmail nhận thông báo" type="text" placeholder="NHẬP EMAIL"/>
+                                        <span class="signup_button">ĐĂNG KÝ</span>
+                                   </form>
+                              </section>
+                         </div>
+                    </div>
+               </section>
+               <div class="container">
+                    <section class="footer_display">
+                         <div class="footer_inf">
+                              <div class="logo_web" style="margin-top: 20px; max-width: 15rem;">
+                                   <a href="http://127.0.0.1:5500/My_Web/HTML/Learn_html_CSS.html" title="TLANG STORE">
+                                        <img src="../../Assets_Local/Images/Icons/Screenshot 2024-04-22 134213.png"/>   
+                                   </a>
+                              </div>
+                              <div class="store_inf">
+                                   <strong style="font-size: 1.2rem; color:#66bdff; text-decoration: none;">Trường Đại học Sài Gòn</strong>
+                                   <div><strong>Cơ sở chính:</strong> 273 An Dương Vương – Phường 3 – Quận 5</div>
+                                   <div><strong>Cơ sở 1:</strong> 105 Bà Huyện Thanh Quan – Phường Võ Thị Sáu – Quận 3</div>
+                                   <div><strong>Cơ sở 2:</strong> 04 Tôn Đức Thắng – Phường Bến Nghé – Quận 1</div>
+                              </div>
+                              <div style="font-size:0.9rem; padding: 5px 0 5px 5px; text-indent: 10px; color: white">
+                                   TLANG Store nhận đặt hàng trực tuyến và giao hàng tận nơi.
+                                   KHÔNG hỗ trợ đặt mua và nhận hàng trực tiếp tại văn phòng cũng như tất cả Hệ Thống TLANG Store trên toàn quốc.
+                              </div>
+                              <div class="store_inf">
+                                   <div><strong>Hotline:</strong> 084328xxxx</div>
+                                   <div><strong>Email:</strong> kieutantai2x@gmail.com</div>
+                                   <div><strong>Giấy Phép DKKD:</strong> NONE!</div>
+                              </div>
+                              <div id="admin_web">
+                                   <h3 style="color: #66bdff">ADMIN</h3>
+                                   <div id="admin_display">
+                                        <img src="../../Assets_Local/Images/Icons/Acheron.webp" width="47px"/>
+                                        <p>Thiên Lang Vô Tri</p>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="row">
+                              <div class="footer_links">
+                                   <h3>DỊCH VỤ</h3>
+                                   <ul>
+                                        <li class="first">
+                                             <a href=" ">Điều khoản sử dụng</a>
+                                        </li>
+                                        <li>
+                                             <a href=" ">Chính sách bảo mật thông tin cá nhân</a>
+                                        </li>
+                                        <li>
+                                             <a href=" ">Chính sách bảo mật thanh toán</a>
+                                        </li>
+                                        <li class="last">
+                                             <a href=" ">Giới thiệu TLang Store</a>
+                                        </li>
+                                   </ul>
+                              </div>
+                              <div class="footer_links">
+                                   <h3> HỖ TRỢ </h3>
+                                   <ul>
+                                        <li class="first">
+                                             <a href="https://www.fahasa.com/doi-tra-hang"> Chính sách đổi - trả - hoàn tiền</a>
+                                        </li>
+                                        <li>
+                                             <a href="https://www.fahasa.com/chinh-sach-bao-hanh-boi-hoan">Chính sách bảo hành - bồi hoàn</a>
+                                        </li>
+                                        <li>
+                                             <a href="https://www.fahasa.com/phuong-thuc-van-chuyen"> Chính sách vận chuyển</a>
+                                        </li>
+                                        <li class="last">
+                                             <a href="https://www.fahasa.com/huong-dan-thanh-toan-va-xuat-hd"> Phương thức thanh toán & xuất HĐ</a>
+                                        </li>
+                                   </ul>
+                              </div>
+                              <div class="footer_links">
+                                   <h3>TÀI KHOẢN CỦA TÔI</h3>
+                                   <ul>
+                                        <li class="first">
+                                             <a href="">Đăng nhập/ Đăng ký tài khoản </a>
+                                        </li>
+                                        <li>
+                                             <a href="">Thay đổi địa chỉ khách hàng</a>
+                                        </li>
+                                        <li>
+                                             <a href="">Chi tiết tài khoản</a>
+                                        </li>
+                                        <li class="last">
+                                             <a href="">Lịch sử mua hàng</a>
+                                        </li>
+                                   </ul>
+                              </div>
+                              <div class="contract">
+                                   <h3 style="padding-left: 14px; margin: 20px 0 10px; color: #66bdff">LIÊN HỆ</h3>
+                                   <div>
+                                        <p><i class="fa-solid fa-location-dot fa-lg" style="color: #66bdff;"></i> Đại học Sài Gòn</p>
+                                        <p><i class="fas fa-envelope fa-lg" style="color: #66bdff;"></i> kieutaXXXX2X@gmail.com</p>
+                                        <p><i class="fa-solid fa-phone fa-lg" style="color: #66bdff;"></i> 08432XXXXX</p>
+                                   </div>
+                              </div>
+                              <div style="display: grid; grid-template-columns: 22% 22% 22% 22%; grid-gap: 25px; height: 80px; width: 100%">
+                                   <div class="footer-images"><img src="../../Assets_Local/Images/Icons/ahamove_logo3.png"/></div>
+                                   <div class="footer-images"><img src="../../Assets_Local/Images/Icons/vnpost1.png" height="50px"/></div>
+                                   <div class="footer-images"><img src="../../Assets_Local/Images/Icons/icon_snappy1.png"/></div>
+                                   <div class="footer-images"><img src="../../Assets_Local/Images/Icons/Logo_ninjavan.png"/></div>
+                              </div>
+                              <div style="display: grid; grid-template-columns: 22% 22% 22% 22%; grid-gap: 25px; height: 80px; width: 100%; margin-top: 20px;">
+                                   <div class="footer-images"><img src="../../Assets_Local/Images/Icons/vnpay_logo.png"/></div>
+                                   <div class="footer-images"><img src="../../Assets_Local/Images/Icons/shopeepay_logo.png" height="45px"/></div>
+                                   <div class="footer-images"><img src="../../Assets_Local/Images/Icons/momopay.png" height="45px"/></div>
+                                   <div class="footer-images"><img src="../../Assets_Local/Images/Icons/ZaloPay-logo-130x83.png"/></div>
+                              </div>
+                         </div>
+                    </section>
+               </div>
+          </footer>
+     </body>
+</html>
