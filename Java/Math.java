@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class javaII {
+public class Math {
      public static void main(String[] args) {
           Scanner sc = new Scanner(System.in);
           System.out.print("nhap input 1: ");

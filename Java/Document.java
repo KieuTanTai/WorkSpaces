@@ -1,4 +1,4 @@
-public class javaI {
+public class Document {
      public static void main(String[] args) {
          String document = """
                          Hôm qua tát nước đầu đình

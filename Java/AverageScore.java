@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class javaIII {
+public class AverageScore {
      public static void main(String[] args) {
           Scanner sc = new Scanner(System.in);
           System.out.print("enter your full name: ");          
