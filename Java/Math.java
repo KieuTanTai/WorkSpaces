@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Math {
      public static void main(String[] args) {
-          Scanner sc = new Scanner(System.in);
+          Scanner  sc = new Scanner(System.in);
           System.out.print("nhap input 1: ");
           int input1 = sc.nextInt();
           System.out.print("nhap input 2 : ");
