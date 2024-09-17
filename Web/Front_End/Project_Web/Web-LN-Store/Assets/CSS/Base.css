@@ -392,8 +392,14 @@ del {
      text-decoration: none;
 }
 
+
+/* css for class cost */
 .cost {
      color: var(--cost-color);
+}
+
+.total-cost {
+     color: var(--bg-red);
 }
 
 del.cost {

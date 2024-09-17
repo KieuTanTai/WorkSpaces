@@ -631,8 +631,14 @@
      flex-flow: row nowrap;
 }
 
+.news-blogs-container .news-blogs-inner .news-blogs-item {
+     display: flex;
+     flex-flow: column wrap;
+}
+
 .news-blogs-container .news-blogs-items .news-blogs-image {
      max-height: 23.5em;
+     
      overflow: hidden;
      position: relative;
 }

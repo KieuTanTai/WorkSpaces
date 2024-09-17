@@ -170,14 +170,15 @@
                               </div>
 
                               <div class="cart-ui-content">
-                                   <section id="no-item" class="margin-y-12 cart-ui disable">
+                                   <section id="blank-cart" class="margin-y-12 cart-ui disable">
                                         <img src="https://m.media-amazon.com/images/G/31/cart/empty/kettle-desaturated._CB424694257_.svg">
                                         <span class="font-size-16 padding-left-16 margin-y-12">Không có sản phẩm nào trong giỏ hàng. Quay lại cửa hàng để tiếp tục mua sắm.</span>
                                         <section class="flex-center font-bold capitalize margin-y-12">
                                              <a href=" " target="_blank" class="category-btn">trang chủ</a>
                                         </section>
                                    </section>
-                                   <section id="have-item">
+
+                                   <section id="cart">
                                         <div class="grid-cols col-l-8 no-gutter">
                                              <div class="header-cart-content cart-ui">
                                                   <input type="checkbox" name="selection-item" id="selection-item" class="grid-col col-l-1">
@@ -186,31 +187,124 @@
                                                        <span class="item-count">(1 sản phẩm)</span>
                                                   </div>
      
-                                                  <div class="grid-col col-l-2">số lượng</div>
-                                                  <div class="grid-col col-l-2">thành tiền</div>
-                                                  <div class="grid-col col-l-1">xóa</div>
+                                                  <div class="grid-col col-l-2 text-center">số lượng</div>
+                                                  <div class="grid-col col-l-2 text-center">thành tiền</div>
+                                                  <div class="grid-col col-l-1 text-center">xóa</div>
                                              </div>
 
-                                             <div class="cart-item-container margin-top-24">
+                                             <div class="cart-item-container cart-ui margin-top-24">
                                                   <div class="cart-item">
-                                                       <input type="checkbox" name="select-cart-item" id="cart-item-1">
-                                                       <div class="image-product-cart">
+                                                       <input type="checkbox" name="select-cart-item" id="cart-item-1" class="grid-col col-l-1">
+                                                       <div class="product-cart grid-col col-l-6">
                                                             <img src="../Assets/Images/Books/Manga/khe_hat_loi_yeu_1.jpg" alt="khe hat loi yeu 1">
+                                                            <div class="info-product-cart padding-left-8">
+                                                                 <p class="font-bold capitalize">khẽ hát lời yêu 1</p>
+                                                                 <div class="cart-item-price">
+                                                                      <span class="new-price font-bold padding-right-8 cost">55,250₫</span>
+                                                                      <del class="old-price cost">65,000₫</del>
+                                                                 </div>
+                                                            </div>   
                                                        </div>
-                                                       <div class="info-product-cart">
-                                                            <p>khẽ hát lời yêu 1</p>
-                                                            <span class="cost">55,250₫</span>
-                                                            <del class="cost">65,000₫</del>
-                                                       </div>   
-                                                       <div class="number-product-cart">
-                                                            <div class="quantity-cart">
-                                                                 <input type="number" name="quantity-cart" id="quantity-cart" value="1" max="2">
-                                                            </div>
-                                                            <div class="total-cost">55,250₫</div>
-                                                            <div class="rm-cart-btn">
-                                                                 
-                                                            </div>
+                                                       <div class="number-product-cart grid-col col-l-2">
+                                                                 <input type="number" name="quantity-cart" id="update_12323" value="1" max="2" class="quantity-cart">
                                                        </div>                                                    
+                                                       <div class="total-cost font-bold text-center grid-col col-l-2">55,250₫</div>
+                                                       <div class="rm-cart-btn grid-col col-l-1"> <i class="fa-solid fa-trash fa-lg" style="color: var(--primary-dark);"></i> </div>
+                                                  </div>
+                                                  
+                                                  <div class="cart-item">
+                                                       <input type="checkbox" name="select-cart-item" id="cart-item-2" class="grid-col col-l-1">
+                                                       <div class="product-cart grid-col col-l-6">
+                                                            <img src="../Assets/Images/Books/Manga/khe_hat_loi_yeu_1.jpg" alt="khe hat loi yeu 1">
+                                                            <div class="info-product-cart padding-left-8">
+                                                                 <p class="font-bold capitalize">khẽ hát lời yêu 1</p>
+                                                                 <div class="cart-item-price">
+                                                                      <span class="new-price font-bold padding-right-8 cost">55,250₫</span>
+                                                                      <del class="old-price cost">65,000₫</del>
+                                                                 </div>
+                                                            </div>   
+                                                       </div>
+                                                       <div class="number-product-cart grid-col col-l-2">
+                                                                 <input type="number" name="quantity-cart" id="update_12324" value="1" max="2" class="quantity-cart">
+                                                       </div>                                                    
+                                                       <div class="total-cost font-bold text-center grid-col col-l-2">55,250₫</div>
+                                                       <div class="rm-cart-btn grid-col col-l-1"> <i class="fa-solid fa-trash fa-lg" style="color: var(--primary-dark);"></i> </div>
+                                                  </div>
+
+                                                  <div class="cart-item">
+                                                       <input type="checkbox" name="select-cart-item" id="cart-item-3" class="grid-col col-l-1">
+                                                       <div class="product-cart grid-col col-l-6">
+                                                            <img src="../Assets/Images/Books/Manga/khe_hat_loi_yeu_1.jpg" alt="khe hat loi yeu 1">
+                                                            <div class="info-product-cart padding-left-8">
+                                                                 <p class="font-bold capitalize">khẽ hát lời yêu 1</p>
+                                                                 <div class="cart-item-price">
+                                                                      <span class="new-price font-bold padding-right-8 cost">55,250₫</span>
+                                                                      <del class="old-price cost">65,000₫</del>
+                                                                 </div>
+                                                            </div>   
+                                                       </div>
+                                                       <div class="number-product-cart grid-col col-l-2">
+                                                                 <input type="number" name="quantity-cart" id="update_12325" value="1" max="2" class="quantity-cart">
+                                                       </div>                                                    
+                                                       <div class="total-cost font-bold text-center grid-col col-l-2">55,250₫</div>
+                                                       <div class="rm-cart-btn grid-col col-l-1"> <i class="fa-solid fa-trash fa-lg" style="color: var(--primary-dark);"></i> </div>
+                                                  </div>
+
+                                                  <div class="cart-item">
+                                                       <input type="checkbox" name="select-cart-item" id="cart-item-4" class="grid-col col-l-1">
+                                                       <div class="product-cart grid-col col-l-6">
+                                                            <img src="../Assets/Images/Books/Manga/khe_hat_loi_yeu_1.jpg" alt="khe hat loi yeu 1">
+                                                            <div class="info-product-cart padding-left-8">
+                                                                 <p class="font-bold capitalize">khẽ hát lời yêu 1</p>
+                                                                 <div class="cart-item-price">
+                                                                      <span class="new-price font-bold padding-right-8 cost">55,250₫</span>
+                                                                      <del class="old-price cost">65,000₫</del>
+                                                                 </div>
+                                                            </div>   
+                                                       </div>
+                                                       <div class="number-product-cart grid-col col-l-2">
+                                                                 <input type="number" name="quantity-cart" id="update_12326" value="1" max="2" class="quantity-cart">
+                                                       </div>                                                    
+                                                       <div class="total-cost font-bold text-center grid-col col-l-2">55,250₫</div>
+                                                       <div class="rm-cart-btn grid-col col-l-1"> <i class="fa-solid fa-trash fa-lg" style="color: var(--primary-dark);"></i> </div>
+                                                  </div>
+
+                                                  <div class="cart-item">
+                                                       <input type="checkbox" name="select-cart-item" id="cart-item-5" class="grid-col col-l-1">
+                                                       <div class="product-cart grid-col col-l-6">
+                                                            <img src="../Assets/Images/Books/Manga/khe_hat_loi_yeu_1.jpg" alt="khe hat loi yeu 1">
+                                                            <div class="info-product-cart padding-left-8">
+                                                                 <p class="font-bold capitalize">khẽ hát lời yêu 1</p>
+                                                                 <div class="cart-item-price">
+                                                                      <span class="new-price font-bold padding-right-8 cost">55,250₫</span>
+                                                                      <del class="old-price cost">65,000₫</del>
+                                                                 </div>
+                                                            </div>   
+                                                       </div>
+                                                       <div class="number-product-cart grid-col col-l-2">
+                                                                 <input type="number" name="quantity-cart" id="update_12327" value="1" max="2" class="quantity-cart">
+                                                       </div>                                                    
+                                                       <div class="total-cost font-bold text-center grid-col col-l-2">55,250₫</div>
+                                                       <div class="rm-cart-btn grid-col col-l-1"> <i class="fa-solid fa-trash fa-lg" style="color: var(--primary-dark);"></i> </div>
+                                                  </div>
+
+                                                  <div class="cart-item">
+                                                       <input type="checkbox" name="select-cart-item" id="cart-item-6" class="grid-col col-l-1">
+                                                       <div class="product-cart grid-col col-l-6">
+                                                            <img src="../Assets/Images/Books/Manga/khe_hat_loi_yeu_1.jpg" alt="khe hat loi yeu 1">
+                                                            <div class="info-product-cart padding-left-8">
+                                                                 <p class="font-bold capitalize">khẽ hát lời yêu 1</p>
+                                                                 <div class="cart-item-price">
+                                                                      <span class="new-price font-bold padding-right-8 cost">55,250₫</span>
+                                                                      <del class="old-price cost">65,000₫</del>
+                                                                 </div>
+                                                            </div>   
+                                                       </div>
+                                                       <div class="number-product-cart grid-col col-l-2">
+                                                                 <input type="number" name="quantity-cart" id="update_12328" value="1" max="2" class="quantity-cart">
+                                                       </div>                                                    
+                                                       <div class="total-cost font-bold text-center grid-col col-l-2">55,250₫</div>
+                                                       <div class="rm-cart-btn grid-col col-l-1"> <i class="fa-solid fa-trash fa-lg" style="color: var(--primary-dark);"></i> </div>
                                                   </div>
                                              </div>
                                         </div>
