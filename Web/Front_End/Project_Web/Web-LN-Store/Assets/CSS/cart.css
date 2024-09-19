@@ -37,7 +37,7 @@
 }
 
 .cart-ui-content #cart > div:last-child{
-     padding: 0 0 0 1.5em;
+     padding: 0 0 0 1em;
 }
 
 .cart-ui-content #cart .cart-item-container {
@@ -109,8 +109,8 @@
 }
 
 .promotion-block-content .shop-voucher input {
-     width: 20em;
-     padding: 0.5em;
+     width: 80%;
+     padding: var(--btn-height);
      outline: none;
      background: none;
      border: 1px solid var(--border);
@@ -118,7 +118,8 @@
 }
 
 .promotion-block-content .shop-voucher button {
-     padding: 0.5em;
+     padding: var(--btn-height);
+     color: var(--primary-white);
      background: var(--main-color);
      border: 1px solid var(--border);
      border-radius: var(--normal-radius);
@@ -129,7 +130,7 @@
 }
 
 #cart .payment-methods img {
-     width: 12%;
+     width: 10%;
 }
 
 .payment-methods li + li{
@@ -140,4 +141,35 @@
      display: flex;
      flex-flow: column wrap;
      border-top: 1px solid var(--border);
+}
+
+.promotion-block-content .order-summary div {
+     padding: 0.25em 0;
+     display: flex;
+     flex-flow: row wrap;
+     justify-content: space-between;
+}
+
+.order-summary div:nth-child(5) {
+     border-bottom: 1px solid var(--border);
+}
+
+.order-summary .checkout-btn {
+     border: none;
+     background: var(--bg-red);
+     padding: var(--btn-height);
+     color: var(--primary-white);
+     border-radius: var(--normal-radius);
+}
+
+#cart .user-cart-note textarea {
+     width: 100%;
+     padding: 0.5em;
+     min-height: 10em;
+     margin-top: 0.25em;
+     resize: none;
+     outline: none;
+     border: none;
+     border-radius: var(--normal-radius);
+     background: var(--primary-grey)
 }
