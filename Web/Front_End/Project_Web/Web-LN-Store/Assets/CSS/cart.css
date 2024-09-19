@@ -59,11 +59,15 @@
      top: 0;
      left: 0;
      right: 0;
-     opacity: 0.3;
+     opacity: 0.6;
      padding: 0.2px;
      position: absolute;
-     background: var(--main-color);
+     background: var(--border);
      
+}
+
+.cart-item .price-per-item {
+     color: var(--bg-red);
 }
 
 #cart .cart-item .product-cart {
@@ -85,6 +89,7 @@
      transform: translateX(40%);
      outline: none;
      text-align: center;
+     background: var(--primary-grey);
      border-radius: var(--normal-radius);
      border: 1px solid var(--primary-grey);
 }
@@ -95,4 +100,44 @@
 
 #cart .cart-item .rm-cart-btn i{
      transform: translateX(50%);
+}
+
+#cart .promotion-block-content .shop-voucher {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.promotion-block-content .shop-voucher input {
+     width: 20em;
+     padding: 0.5em;
+     outline: none;
+     background: none;
+     border: 1px solid var(--border);
+     border-radius: var(--normal-radius); 
+}
+
+.promotion-block-content .shop-voucher button {
+     padding: 0.5em;
+     background: var(--main-color);
+     border: 1px solid var(--border);
+     border-radius: var(--normal-radius);
+}
+
+#cart .promotion-block-content .payment-methods {
+     text-transform: capitalize;
+}
+
+#cart .payment-methods img {
+     width: 12%;
+}
+
+.payment-methods li + li{
+     padding-top: 0.5em;
+}
+
+#cart .promotion-block-content .order-summary {
+     display: flex;
+     flex-flow: column wrap;
+     border-top: 1px solid var(--border);
 }

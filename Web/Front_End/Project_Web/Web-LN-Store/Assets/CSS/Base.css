@@ -11,13 +11,13 @@
      --body-theme: #232627;
      --btn-hover: #689AF2;
      --border: rgba(113, 156, 227, 0.3);
-     --cost-color: #7FC8F5;
+     --price-color: #7FC8F5;
      --overlay: rgba(0, 0, 0, 0.5);
      --filter: linear-gradient(rgba(174, 241, 255, 0.5), rgba(255, 255, 255, 0));
      --filter-reverse: linear-gradient(rgba(255, 255, 255, 0), rgba(174, 241, 255, 0.5));
 
      --max-height-header: 3.5em;
-     --btn-height: 2.5em;
+     /* --btn-height: 2.5em; */
      --max-search-bar: 4em;
      --normal-radius: 0.25em;
      --higher-radius: 0.5em;
@@ -57,8 +57,14 @@ img {
 }
 
 del {
-     opacity: 0.8;
+     color: var(--primary-dark) !important;
+     opacity: 0.4;
 }
+
+ul {
+     list-style: none;
+}
+
 /* CSS global */
 
 /* width & height */
@@ -76,6 +82,14 @@ del {
 /* end width & height */
 
 /* margin & padding */
+.margin-left-8 {
+     margin-left: 0.5em;
+}
+
+.margin-right-8 {
+     margin-right: 0.5em;
+}
+
 .margin-right-12 {
      margin-right: 0.75em;
 }
@@ -98,6 +112,10 @@ del {
 
 .margin-y-24 {
      margin: 1.5em 0;
+}
+
+.margin-bottom-8 {
+     margin-bottom: 0.5em;
 }
 
 .margin-bottom-12 {
@@ -196,16 +214,17 @@ del {
      text-align: center;
 }
 
-.flex-center {
+.flex {
      display: flex;
-     align-items: center;
      flex-flow: row wrap;
+}
+
+.justify-center {
      justify-content: center;
 }
 
-.flex-justify-center {
-     display: flex;
-     justify-content: center;
+.align-center {
+     align-items: center;
 }
 
 .flex-direction-y {
@@ -309,7 +328,7 @@ del {
 
 /* css for cart ui */
 .cart-ui {
-     padding: 0.5em;
+     padding: 0.75em;
      border-radius: var(--higher-radius);
      box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
      background-color: var(--primary-white);
@@ -393,16 +412,11 @@ del {
 }
 
 
-/* css for class cost */
-.cost {
-     color: var(--cost-color);
+/* css for class price */
+.price {
+     color: var(--price-color);
 }
 
-.total-cost {
+.total-price {
      color: var(--bg-red);
-}
-
-del.cost {
-     color: unset;
-     opacity: 0.5;
 }
