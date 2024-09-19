@@ -139,16 +139,16 @@
 }
 
 #user-account .nav-account .lnw-btn {
-     height: 3em;
      min-width: 14em;
-     border-radius: var(--higher-radius);
      display: flex;
      color: inherit;
      cursor: pointer;
      align-items: center;
+     padding: var(--btn-height);
      justify-content: center;
-     border: 0.2em solid var(--active);
      background: var(--primary-white);
+     border-radius: var(--higher-radius);
+     border: 0.2em solid var(--active);
 }
 
 #user-account .nav-account .lnw-btn.active {
@@ -603,7 +603,7 @@
 
 /* load more item */
 #main-container .category-btn {
-     padding: 0.5em 4em;
+     padding: var(--btn-height) 4em;
      color: var(--primary-white);
      background: var(--main-color);
      border-radius: var(--higher-radius);
@@ -739,21 +739,19 @@
 
 .footer-col-container .footer-input #user-gmail {
      width: 100%;
-     height: 3em;
      margin-right: 1.5em;
-     border-radius: var(--higher-radius);
-     padding-inline: 0.5em;
      border: none;
      outline: none;
+     padding: var(--btn-height);
      color: var(--primary-dark);
+     border-radius: var(--higher-radius);
      background-color: var(--primary-grey);
 }
 
 .footer-col-container .footer-input .subscribe-btn {
      right: 34%;
-     height: 3em;
-     padding-inline: 1em;
      border-radius: 0 0.5em 0.5em 0;
+     padding: var(--btn-height) 1em;
      border: none;
      color: inherit;
      position: absolute;
