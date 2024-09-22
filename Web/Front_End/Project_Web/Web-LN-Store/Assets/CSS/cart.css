@@ -1,7 +1,7 @@
-/* #main-container .cart-ui-content {
+#main-container .cart-ui-content {
      display: flex;
      flex-flow: row wrap;
-} */
+}
 
 #main-container .cart-title {
      margin-bottom: 0.25em;
@@ -70,7 +70,7 @@
      color: var(--bg-red);
 }
 
-#cart .cart-item .product-cart {
+.cart-item .product-cart {
      display: flex;
      flex-flow: row;
 }
