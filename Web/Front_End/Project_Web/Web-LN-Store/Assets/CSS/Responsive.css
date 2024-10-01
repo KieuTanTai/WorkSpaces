@@ -97,7 +97,12 @@
           left: 50%;
      }
 
-     /* CSS for main content */
+     /* CSS for main content */     
+     .nav-btn {
+     left: 0.6%;
+     right: 0.6%;
+     }
+
      #main-content .category-tab .product-container {
           flex-wrap: nowrap;
           overflow-x: auto;
@@ -120,6 +125,7 @@
           padding-inline: 0.75em;
      }
 }
+
 /* Mobile */
 @media (max-width: 46.1875em) {
      /* set order for items in header bar */
@@ -214,7 +220,6 @@
 }
 
 /* RESPONSIVE FOR ANOTHER WEB */
-
 /* RESPONSIVE FOR detail_product.html */
 @media (max-width: 63.9375em) {
      .detail-block .product-image img {
@@ -260,7 +265,7 @@
 
      .block-product .nav-btn .next-btn,
      .block-product .nav-btn .prev-btn {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
      }
 
      .detail-block .nav-btn {
@@ -272,5 +277,91 @@
      .product-like .nav-btn {
           left: 2%;
           right: 2%;
+     }
+}
+
+/* RESPONSIVE FOR cart.html */
+@media (max-width: 63.9375em) {
+     .block-product .info-product-cart {
+          margin-bottom: 1em;
+     }
+
+     #cart .number-product-cart {
+          padding-left: 0.5em;
+     }
+
+     #cart .number-product-cart .quantity-cart {
+          transform: translateX(0);
+     }
+
+     .block-product .rm-cart-btn {
+          justify-content: end;
+     }
+
+     .cart-ui-content #cart > div:last-child {
+          padding: 1.5em 0 0;
+     }
+
+     #cart .payment-methods img {
+          width: 5%;
+     }
+
+     .payment-methods li + li {
+          padding-top: 1em;
+     }
+}
+
+@media (max-width: 46.1875em) {
+     #cart .number-product-cart .quantity-cart {
+          padding-left: 0;
+     }
+}
+
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+
+}
+
+/* RESPONSIVE FOR detail_product.html */
+@media (max-width: 63.9375em) {
+     #customer-order .order-info .block-order-info {
+          text-align: center;
+     }
+
+     .order-info .block-order-info h4 {
+          font-size: 0.75rem;
+     }
+
+     .order-info .block-order-info span {
+          text-align: center;
+          font-size: 1rem;
+     }
+}
+
+@media (max-width: 46.1875em) {
+     .order-status-container .order-info .tracking-bar {
+          display: none;
+     }
+
+     .order-info .delivery-state {
+          font-size: var(--font-size-14);
+     }
+
+     .tracking-block .tracking-time,
+     .tracking-block .delivery-state {
+          font-size: 0.75em;
+     }
+
+     .order-status-container #customer-order .history-order-link {
+          max-width: 70%;
+     }
+
+     .history-order-table .block-product {
+          flex-basis: unset;
+     }
+}
+
+@media (min-width: 46.25em) and (max-width: 63.9375em) {
+     .order-status-container #customer-order .history-order-link {
+          max-width: 30%;
      }
 }
