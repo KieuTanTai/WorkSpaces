@@ -1,53 +1,67 @@
 'use strict'
 class Products {
-     #pImage; 
-     #pSale; 
-     #pName; 
-     #pPrice;
+     #image; 
+     #sale; 
+     #name; 
+     #price;
+     #id;
 
-     // add a static private variable 
-     static #pId = () => {
-          const character = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-          const charLength = character.length;
-          return `${Math.round(Math.random() * 100) + character.charAt(Math.random() * charLength) + Math.round(Math.random() * 100)}`;
+     constructor (id, image, name, sale, price) {
+          this.#id = id;
+          this.#image = image;
+          this.#name = name;
+          this.#sale= sale;
+          this.#price = price;
      }
 
-     // get value of this variable with getters
-     static getPId() {
-          return Products.#pId;
+     setId(id) {
+          this.#id = id;
      }
 
-     constructor (pImage, pName, pSale, pPrice) {
-          this.#pImage = pImage;
-          this.#pName = pName;
-          this.#pSale= pSale;
-          this.#pPrice = pPrice;
+     getId() {
+          return this.#id;
      }
 
      getProduct() {
           return {
-               "id" : Products.#pId(), 
-               "image" : this.#pImage,
-               "name" :this.#pName,
-               "sale" : this.#pSale, 
-               "price" : this.#pPrice            
+               "id" : this.#id, 
+               "image" : this.#image,
+               "name" :this.#name,
+               "sale" : this.#sale, 
+               "price" : this.#price            
           }
      }
 
-     setProduct_pImage (repImage) {
-          this.#pImage = repImage;
+     getImage () {
+          return this.#image; 
      }
 
-     setProduct_pSale (repSale) {
-          this.#pSale = repSale;
+     setImage (reImage) {
+          this.#image = reImage;
      }
 
-     setProduct_pName (repName) {
-          this.#pName = repName;
+     getSale () {
+          return this.#sale;
      }
 
-     setProduct_pPrice (repPrice) {
-          this.#pPrice = repPrice;
+     setSale (reSale) {
+          this.#sale = reSale;
+     }
+
+     getName () {
+          return this.#name;
+     }
+
+     setName (rename) {
+          this.#name = rename;
+     }
+
+     getPrice () {
+          return this.#price;
+     }
+
+     setPrice (reprice) {
+          this.#price = reprice;
      }
 }
 
