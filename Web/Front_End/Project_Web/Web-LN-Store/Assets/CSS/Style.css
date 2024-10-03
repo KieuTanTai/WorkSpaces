@@ -542,8 +542,7 @@
 }
 
 .block-product .product-image img {
-     width: 100%;
-     height: 100%;
+     max-width: 100%;
 }
 
 .block-product .info-inner {
