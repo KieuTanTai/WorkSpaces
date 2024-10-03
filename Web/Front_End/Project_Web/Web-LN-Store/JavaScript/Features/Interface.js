@@ -1,6 +1,4 @@
-let webInterface = {
-    
-}
+
 
 document.addEventListener("DOMContentLoaded", () => {
      let temp = 65000;
@@ -12,5 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
           "key4" : "C++", 
           "key5" : "C#"
      }
+
+     let temp3 = new Map(
+     [          
+          ['key1', '30$'],
+          ['key2', '10$'],
+          ['key3', '20$'],
+          ['key4', '50$'],
+          ['key6', '70$']
+     ]
+     );
      
+     console.log(temp3);
+
 });
