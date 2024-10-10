@@ -8,12 +8,14 @@ void Read_File(int Row, int Column)
      //read file table.inp
      std::ifstream file;
      file.open("../../Documents/table.inp");
-     for(int i=0; i<Row; i++)
-     {
-          for(int j=0; j<Column; j++)
-               std::cout<<file.get()<<"\t";
+     if(file.is_open()) {
+          for(int i=0; i<Row; i++)
+          {
+               for(int j=0; j<Column; j++)
+                    std::cout<<file.get()<<"\t";
+          }
+          file.close();
      }
-     file.close();
 }
 void Write_File(int &Row, int &Column)
 {
