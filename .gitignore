@@ -2,7 +2,7 @@
 Workspace/
 Web1/
 Java/
-JavaOOP/
+JavaOOP/**
 Tailwindcss/
 node_modules/
 .vscode/
