@@ -44,8 +44,13 @@
      }
 
      .s-m-nav-btn button + button:not(:last-child):before {
+<<<<<<< HEAD
           left: -20%;
           content: "/";
+=======
+          left: -16%;
+          content: "|";
+>>>>>>> Test
           font-weight: bold;
           position: absolute;
           transform: translateY(6%);
@@ -150,6 +155,7 @@
           margin: 1.5em 0;
      }
 
+<<<<<<< HEAD
      .category-tab .block-product .product-image {
           height: 16em;
      }
@@ -158,6 +164,8 @@
           min-width: 16em;
      } */
 
+=======
+>>>>>>> Test
      .search-container .search-form-container input {
           max-width: 100%;
      }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #main-container .cart-title {
      padding: 0.5em 0;
      margin-bottom: 0.25em;
@@ -5,23 +6,42 @@
      align-items: center;
 }
 
+=======
+>>>>>>> Test
 #main-container .cart-ui-content img {
      width: 100%;
 }
 
 .cart-ui-content #blank-cart,
 .cart-ui-content #cart {
+<<<<<<< HEAD
      display: flex;
      flex-flow: row wrap;
 }
 
 .cart-ui-content #blank-cart {
+=======
+     display: none;
+}
+
+.cart-ui-content #blank-cart.active,
+.cart-ui-content #cart.active {
+     display: flex !important;
+     flex-flow: row wrap;
+}
+
+.cart-ui-content #blank-cart.active {
+>>>>>>> Test
      align-items: center;
      flex-flow: column wrap;
 }
 
 #blank-cart img {
+<<<<<<< HEAD
      max-width: 40%;
+=======
+     max-width: 30%;
+>>>>>>> Test
 }
 
 /* css when user have at least one cart */
@@ -151,10 +171,21 @@
 
 .order-summary .checkout-btn {
      border: none;
+<<<<<<< HEAD
+=======
+     cursor: pointer;
+>>>>>>> Test
      padding: var(--btn-height);
      background: var(--bg-red);
 }
 
+<<<<<<< HEAD
+=======
+.order-summary .checkout-btn:hover {
+     background: var(--bg-red) !important;
+}
+
+>>>>>>> Test
 #cart .user-cart-note textarea {
      width: 100%;
      padding: 0.5em;

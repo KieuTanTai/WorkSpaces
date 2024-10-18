@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 hello world i'm test file txt
 hello world i'm test file txt
 hello world i'm test file txt
 hello world i'm test file txt
 hello world i'm test file txt
 hello world i'm test file txt
+=======
+24 5442 4234 String 123
+231 String String 1231
+322 String 11
+01
+5333 String NAN 123
+>>>>>>> Test

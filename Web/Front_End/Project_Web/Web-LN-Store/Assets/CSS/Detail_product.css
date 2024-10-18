@@ -120,4 +120,11 @@
 .same-author .product-image img,
 .product-like .product-image img {
      object-fit: contain;
+<<<<<<< HEAD
+=======
+}
+
+.product-like {
+     margin-bottom: 1.5em;
+>>>>>>> Test
 }

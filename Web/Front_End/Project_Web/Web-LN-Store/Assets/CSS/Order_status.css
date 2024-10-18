@@ -4,19 +4,34 @@
 }
 
 .order-status-container #blank-order {
+<<<<<<< HEAD
      display: flex; 
      align-items: center;
+=======
+     width: 100%;
+     text-align: center;
+>>>>>>> Test
      flex-flow: column wrap;
 }
 
 .order-status-container #blank-order img{
+<<<<<<< HEAD
      width: 20%;
+=======
+     width: 26%;
+     margin: auto;
+     padding-bottom: 1em;
+>>>>>>> Test
 }
 
 #blank-order, 
 #customer-order,
 #history-order-container {
      padding: 1em;
+<<<<<<< HEAD
+=======
+     display: none;
+>>>>>>> Test
      background: var(--primary-white);
      border-radius: var(--higher-radius);
 }
@@ -25,6 +40,7 @@
      border-bottom: 1px solid var(--border);
 }
 
+<<<<<<< HEAD
 /* .order-status-header > div{
      position: relative;
 } */
@@ -54,6 +70,8 @@
      background-color: var(--main-color);
 } */
 
+=======
+>>>>>>> Test
 .order-status-container .order-info .block-order-info  {
      min-height: 6em;
      padding: 0.5em 0;
@@ -78,6 +96,7 @@
      position: relative;
 }
 
+<<<<<<< HEAD
 /* .tracking-bar .in-transit-dot .dot-status::before {
      content: " ";
      top : 14%;
@@ -108,6 +127,8 @@
      background-color: var(--main-color);
 } */
 
+=======
+>>>>>>> Test
 .tracking-bar .dot-status .dot-active 
 /* .tracking-bar .dot-status .dot-disable*/{
      display: none;
@@ -130,6 +151,13 @@
      margin-right: -2em;
 }
 
+<<<<<<< HEAD
+=======
+.shipped-dot .dot-status > div {
+     transform: translateX(4%);
+}
+
+>>>>>>> Test
 .shipped-dot .dot-status .border-arrow-top {
      left: 0;
      top: 1em;
@@ -142,6 +170,13 @@
      transform: translateX(-50%);
 }
 
+<<<<<<< HEAD
+=======
+.delivered-dot .dot-status > div {
+     transform: translateX(-4%);
+}
+
+>>>>>>> Test
 .delivered-dot .dot-status .border-arrow-top {
      top: 1em;
      right: 0;
@@ -152,7 +187,11 @@
      flex-flow:column-reverse;
 }
 
+<<<<<<< HEAD
 .tracking-table .tracking-block:not(:last-child) {
+=======
+.tracking-table .tracking-block:not(:first-child) {
+>>>>>>> Test
      border-top: 1px solid var(--border);
 } 
 
@@ -160,6 +199,7 @@
      position: relative;
 }
 
+<<<<<<< HEAD
 /* .tracking-block:not(:last-child) .dot-status > div::before {
      content: " ";
      position: absolute;
@@ -172,6 +212,8 @@
      background: var(--main-color);
 } */
 
+=======
+>>>>>>> Test
 .order-status-container #customer-order .history-order-link {
      max-width: 26%;
      padding: 0.5em;
@@ -217,11 +259,28 @@
      cursor: pointer;
 }
 
+<<<<<<< HEAD
 .block-product .buy-btn {
+=======
+#history-order-container .block-product .buy-btn {
+>>>>>>> Test
      padding: 0.5em 1.5em;
      background: var(--main-color);
 }
 
 .history-order-table .completed-order-info {
      display: flex;
+<<<<<<< HEAD
+=======
+}
+
+.overlay .order-status-container {
+     margin: auto;
+}
+
+.overlay .order-status-container .tracking-table {
+     padding: 1em;
+     background: var(--primary-white);
+     border-radius: var(--higher-radius);
+>>>>>>> Test
 }

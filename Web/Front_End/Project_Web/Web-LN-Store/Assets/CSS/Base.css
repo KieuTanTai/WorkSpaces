@@ -379,7 +379,7 @@ ul {
      left: 0;
      right: 0;
      bottom: 0;
-     z-index: 2;
+     z-index: 12;
      width: 100%;
      height: 100%;
      display: none;
@@ -400,6 +400,13 @@ ul {
      border-radius: var(--normal-radius);
 }
 
+<<<<<<< HEAD
+=======
+.button:hover {
+     background: var(--btn-hover) !important;
+}
+
+>>>>>>> Test
 .search-btn {
      top: 0;
      right: 0;
@@ -541,7 +548,11 @@ ul {
 
 /* disable active success error */
 .active {
+<<<<<<< HEAD
      display: initial !important;
+=======
+     display:block !important;
+>>>>>>> Test
 }
 
 *.active {
@@ -578,3 +589,14 @@ ul {
 .total-price {
      color: var(--bg-red);
 }
+<<<<<<< HEAD
+=======
+
+/* validate */
+.error-message {
+     text-align: start;
+     font-size: 0.75rem;
+     padding-bottom: 1em;
+     color: var(--bg-red);
+}
+>>>>>>> Test

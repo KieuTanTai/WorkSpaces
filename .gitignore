@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Workspace/Back_End.code-workspace
 Workspace/Front_End.code-workspace
 **/.vscode
@@ -13,3 +14,27 @@ Web1/
 Java/
 JavaOOP/
 Web/Front_End/Project_Web/Web-LN-Store/HTML/demo
+=======
+.git/
+Workspace/
+Web1/
+Java/
+JavaOOP/
+Tailwindcss/
+node_modules/
+.vscode/
+.idea/
+.build/
+.debug/
+.output/
+output/
+Back_End/
+Font/
+demo/
+doanweb/
+Do_An_Web_Nam2_HK2/
+WEB1/
+Font/
+Framework/
+C++/dotnet-install.sh
+>>>>>>> Test
