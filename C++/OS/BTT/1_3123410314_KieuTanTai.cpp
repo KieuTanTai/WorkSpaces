@@ -1,81 +1,53 @@
 #include<iostream>
-#include<cstdlib>
 #include<cstdbool>
-#include<fstream>
-#include<sstream>
 #include<cstring>
+#include<fstream>
+#include<unistd.h>
+#include<sys/types.h>
+#include<sys/wait.h>
 
-bool checkNumber (std::string input) {
-     for (int i = 0; i < input.length(); i++)
+bool checkInput (int argc, char *input) 
+{
+     if (argc !=3)
+          return false;
+     int length = strlen(input);
+     if (length < 20)
+          return false;
+
+     for (int i = 0; i < length; i++)
           if (!isdigit(input[i]))
                return false;
-     return true;
+     return true;     
 }
 
-bool checkTotalInput (int argc) 
+bool checkExistFile (char *file) 
 {
-     if (argc != 4)
+     if (!std::ifstream (file))
           return false;
      return true;
 }
 
-bool checkFirstInput (char *input) 
+std::string reverseInput (char *input) 
 {
-     if ((atoi(input) < 0) || atoi(input) > 40)
-          return false;
-     return true;
-}
+     std::string temp = "";
+     for (int i = strlen(input) - 1; i >= 0; i--)
+          temp += input[i];
+     return temp;
+} 
 
-bool checkExistFile (char *fInput) 
+double sumNumber (std::string input) 
 {
-     std::ifstream file;
-     file.open(fInput);
-     if (!file.is_open())
-          return false;
-     else 
-          file.close();
-     return true;
-}
-
-void showContentFile (char *fInput, int count) 
-{
-     if (!checkExistFile(fInput))
-     {
-          std::cout << "file output not exist!" << std::endl;
-          exit (false);
-     }     
-     else 
-     {  
-          int breakLine = 0;
-          std::string temp;
-          std::ifstream file;
-          file.open(fInput);
-          while (file >> temp)
-          {
-               if (breakLine %20 == 0)
-                    std::cout << std::endl;
-               std::cout << temp << "   ";
-               breakLine ++;
-          }
-          std::cout << "\ntotal: " << count << std::endl;
-     }
-}
-
-// sum elements in number
-int sumElements (std::string input) 
-{
-     int sum = 0;
-     for (int i = 0; i < input.length(); i++ )
+     double sum = 0;
+     for (int i = 0; i < input.length(); i++)
      {
           char temp = input[i];
           sum += atoi(&temp);
      }
-     return sum;    
+     return sum;
 }
 
-std::string getElementsOnFile (char *fInput, int inputValue, int &count) 
+void showContentFile (char *fInput, int sum) 
 {
-     std::string output = "";
      if (!checkExistFile(fInput))
      {
           std::cout << "file output not exist!" << std::endl;
@@ -86,53 +58,48 @@ std::string getElementsOnFile (char *fInput, int inputValue, int &count)
           std::string temp;
           std::ifstream file;
           file.open(fInput);
-          while (std::getline(file, temp))
-          {
-               if (!checkNumber(temp)) 
-                    continue;
-               int tempValue = sumElements(temp);
-               if (tempValue == inputValue)
-               {
-                    output += temp + " ";
-                    count ++;
-               }
-          }
-          file.close();
+          while (file >> temp)
+               std::cout << temp << std::endl;
+          std::cout << "sum = " << sum << std::endl;
      }
-     return output;
 }
 
-void writeFileOutput (char *fInput, std::string outputString) 
+void writeFile (char *fInput ,std::string input)
 {
-     std::string temp;
-     std::ofstream fileOutput;
-     fileOutput.open(fInput);
-     if (!fileOutput.is_open()) 
+     std::ofstream file;
+     file.open(fInput);
+     if (!file.is_open())
      {
-          std::cout << "error when create file or read file!" << std::endl;
-          exit (false);
+          std::cout << "error when open file output" << std::endl;
+          return;
      }
-     else 
-          fileOutput << outputString;
-     fileOutput.close();
+     file << input;
+     file.close();
+}
+
+void processTest (char *input, char* fInput)
+ {
+     pid_t pid = fork();
+     if (pid > 0)
+     {
+          wait(nullptr);
+          std::cout << "file content: " << std::endl;
+          showContentFile(fInput, sumNumber(input));
+     }
+     else if (pid == 0)
+          writeFile(fInput, reverseInput(input));
+     else
+     {
+          std::cout << "something went wrong!" << std::endl;
+          exit(false);
+     }
 }
 
 int main (int argc, char *argv[]) 
 {
-     int count = 0;
-     std::string outputString;
-     if (!checkTotalInput(argc))
-     {
-          std::cout << "error input count!" << std::endl;    
-          exit (false);
-     } 
-     if (!checkFirstInput(argv[1]) || !checkExistFile(argv[2]))
-     {
-          std::cout << "your input is not correct or input file not exist!" << std::endl;
-          exit (false);
-     }
-     outputString = getElementsOnFile(argv[2], atoi(argv[1]), count);
-     writeFileOutput(argv[3], outputString);
-     showContentFile(argv[3], count);
+     char* handler = argv[1];
+     if (!checkInput(argc, argv[1]))
+          std::cout << "your input is wrong!" << std::endl;
+     processTest (argv[1], argv[2]);
      return true;
 }
