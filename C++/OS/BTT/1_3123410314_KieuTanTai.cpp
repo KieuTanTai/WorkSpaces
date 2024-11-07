@@ -1,24 +1,21 @@
 #include<iostream>
-#include<cstdbool>
-#include<cstring>
-#include<fstream>
+#include<cstdlib>
 #include<unistd.h>
-#include<sys/types.h>
-#include<sys/wait.h>
+#include<pthread.h>
+#include<cstring>
+#include<stdbool.h>
+#include<random>
+#include<fstream>
+#include<sstream>
 
-bool checkInput (int argc, char *input) 
-{
-     if (argc !=3)
-          return false;
-     int length = strlen(input);
-     if (length < 20)
-          return false;
-
-     for (int i = 0; i < length; i++)
-          if (!isdigit(input[i]))
-               return false;
-     return true;     
-}
+struct container {
+     float average;
+     int count = 0;
+     int *ascNumbers = new int[count];
+     std::string primeNumbers;
+     std::string inputFile;
+     std::string outputFile;
+};
 
 bool checkExistFile (char *file) 
 {
@@ -27,79 +24,171 @@ bool checkExistFile (char *file)
      return true;
 }
 
-std::string reverseInput (char *input) 
+bool checkInput (int argc, char *input) 
 {
-     std::string temp = "";
-     for (int i = strlen(input) - 1; i >= 0; i--)
-          temp += input[i];
-     return temp;
-} 
+     if (argc !=3)
+          return false;
 
-double sumNumber (std::string input) 
-{
-     double sum = 0;
+     if(!checkExistFile(input))
+          return false;
+     return true;     
+}
+
+bool isPrime(int num) {
+    if (num < 2)
+        return false;
+
+    if (num % 2 == 0)
+        return false;
+    
+    // Check divisibility from 3 to sqrt(num)
+    for (int i = 2; i <= std::sqrt(num); i += 2)
+        if (num % i == 0)
+            return false;
+    return true;
+}
+
+bool checkNumber (std::string input) {
      for (int i = 0; i < input.length(); i++)
-     {
-          char temp = input[i];
-          sum += atoi(&temp);
-     }
-     return sum;
+          if (!isdigit(input[i]))
+               return false;
+     return true;
 }
 
-void showContentFile (char *fInput, int sum) 
+void *thread1 (void * arg)
 {
-     if (!checkExistFile(fInput))
+     container *ct = &(*(container*)arg);
+     std::ifstream file;
+     file.open(ct->inputFile);
+     if (!file.is_open()) 
      {
-          std::cout << "file output not exist!" << std::endl;
-          exit (false);
-     }     
-     else 
-     {  
-          std::string temp;
-          std::ifstream file;
-          file.open(fInput);
-          while (file >> temp)
-               std::cout << temp << std::endl;
-          std::cout << "sum = " << sum << std::endl;
+          std::cout << "error !" << std::endl;
+          perror("Error: ");
+          exit(1);
      }
-}
-
-void writeFile (char *fInput ,std::string input)
-{
-     std::ofstream file;
-     file.open(fInput);
-     if (!file.is_open())
-     {
-          std::cout << "error when open file output" << std::endl;
-          return;
+     int sum = 0, count = 0, temp;
+     while (file >> temp) {
+          sum += temp;
+          count++;
      }
-     file << input;
+     if (count != 0)
+          ct->average = sum * 1.0 / count;
+          ct->count = count;
      file.close();
+     pthread_exit(NULL);
 }
 
-void processTest (char *input, char* fInput)
- {
-     pid_t pid = fork();
-     if (pid > 0)
+void *thread2 (void * arg)
+{
+     container *ct = &(*(container*)arg);
+     std::ifstream file;
+     file.open(ct->inputFile);
+     if (!file.is_open()) 
      {
-          wait(nullptr);
-          std::cout << "file content: " << std::endl;
-          showContentFile(fInput, sumNumber(input));
+          std::cout << "error !" << std::endl;
+          perror("Error: ");
+          exit(1);
      }
-     else if (pid == 0)
-          writeFile(fInput, reverseInput(input));
-     else
+
+     int *numsArray = new int[ct->count - 1];
+     int temp, i = 0;;
+     while (file >> temp) 
      {
-          std::cout << "something went wrong!" << std::endl;
-          exit(false);
+          numsArray[i] = temp;
+          i++;
      }
+
+     for (int i = 0; i < ct->count - 1; i++) {
+          int temp = i;
+          for (int j = i; j < ct->count; j++) 
+               if (numsArray[i] > numsArray[j])
+                    temp = j;
+               if (temp != i)
+                    std::swap(numsArray[i], numsArray[temp]);
+     }
+
+     ct->ascNumbers = new int[ct->count - 1];
+     ct->ascNumbers = numsArray;
+     file.close();
+     pthread_exit(NULL);
+}
+
+void *thread3 (void * arg)
+{
+     container *ct = &(*(container*)arg);
+     std::ifstream file(ct->inputFile);
+     int temp;
+     if (!file.is_open()) 
+     {
+          std::cout << "error !" << std::endl;
+          perror("Error: ");
+          exit(1);
+     }
+
+     int br = 0;
+     while (file >> temp) {
+          if (br != 0 && br % 10 == 0)
+               ct->primeNumbers.append("\n");
+          if (isPrime(temp))
+               ct->primeNumbers.append(std::to_string(temp) + "  ");
+          br++;
+          
+     }
+     file.close();
+     pthread_exit(NULL);
+}
+
+void *thread4 (void * arg)
+{
+     container *ct = &(*(container*)arg);
+     std::ofstream file;
+     file.open(ct->outputFile);
+     if (!file.is_open()) 
+     {
+          std::cout << "error !" << std::endl;
+          perror("Error: ");
+          exit(1);
+     }
+
+     file << "average: \n";
+     file << ct->average << "\n";
+
+     file << "sort numbers: \n";
+     for (int i = 0; i < ct->count; i++) {
+          if (i != 0 && i % 10 == 0)
+               file << "\n";
+          file << ct->ascNumbers[i] << "    ";
+     }
+     file << "\n";
+     file << "prime numbers: \n";
+     file << ct->primeNumbers << "\n";
+     file.close();
+     pthread_exit(NULL);
 }
 
 int main (int argc, char *argv[]) 
 {
-     char* handler = argv[1];
      if (!checkInput(argc, argv[1]))
-          std::cout << "your input is wrong!" << std::endl;
-     processTest (argv[1], argv[2]);
+     {
+          std::cout << "error input!" << std::endl;
+          exit(1);
+     }
+     container ct;
+     ct.inputFile = argv[1];
+     ct.outputFile = argv[2];
+     pthread_t tid1, tid2, tid3, tid4;
+     pthread_create(&tid1, NULL, thread1, &ct);
+     pthread_join(tid1, NULL);
+     pthread_create(&tid2, NULL, thread2, &ct);
+     pthread_join(tid2, NULL);
+     pthread_create(&tid3, NULL, thread3, &ct);
+     pthread_join(tid3, NULL);
+     pthread_create(&tid4, NULL, thread4, &ct);
+     pthread_join(tid4, NULL);
+
+     std::cout << ct.count << std::endl;
+     std::cout << ct.average << std::endl;
+     std::cout << *ct.ascNumbers <<std::endl;
+     // std::cout << ct.primeNumbers << std::endl;
      return true;
 }

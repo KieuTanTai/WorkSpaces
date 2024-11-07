@@ -2,6 +2,7 @@
 #include<stdbool.h>
 #include<cstring>
 #include<sstream>
+#include<algorithm>
 
 bool checkNumber (char *input) 
 {
@@ -86,6 +87,30 @@ void insertionSort (int length, int *input)
      showArray(length, input);
 }
 
+int partition (int *input, int start, int end) 
+{
+     int pivot = input[end];
+     int temp = start - 1;
+
+     for (int i = start; i < end; i++)
+          if (pivot > input[i])
+          {
+               temp++;
+               std::swap (input[temp], input[i]);
+          }
+     std::swap(input[++temp], input[end]);
+     return temp;
+}
+
+void quickSort (int *input, int start, int end)
+{
+     if (end <= start)
+          return;
+     int pivot = partition(input, start, end);
+     quickSort (input, start, pivot - 1);
+     quickSort (input, pivot + 1, end);
+}
+
 int main (int argc, char *argv[])
 {
      if (!checkInput(argc, argv))
@@ -104,7 +129,12 @@ int main (int argc, char *argv[])
           }
           // bubbleSort(argc - 1, input);
           // selectionSort(argc - 1, input);
-          insertionSort(argc - 1, input);
+          for (int i = 0; i < index; i++)
+               std::cout << input[i] << "\t";
+          std::cout<< index << std::endl;
+          quickSort(input, 0, index - 1);
+          for (int i = 0; i < index; i++)
+               std::cout << input[i] << std::endl;
      }
      return true;
 }
