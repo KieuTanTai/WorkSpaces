@@ -2,7 +2,6 @@
 Workspace/
 Web1/
 Java/
-JavaOOP/**
 Tailwindcss/
 node_modules/
 .vscode/
@@ -20,3 +19,5 @@ WEB1/
 Font/
 Framework/
 C++/dotnet-install.sh
+Hosting/
+JavaOOP/
